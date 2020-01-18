@@ -9,6 +9,10 @@ export class GithubFormComponent implements OnInit {
 
   constructor() { }
 
+  search() {
+    
+  }
+
   ngOnInit() {
   }
 
