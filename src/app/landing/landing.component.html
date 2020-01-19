@@ -34,17 +34,36 @@
           <span class="badge badge-pill badge-primary">{{user.followers}} Followers</span>
           <span class="badge badge-pill badge-warning">{{user.following}} Following</span>
         </p>
-        <p><a href="{{user.html_url}}" target="_blank" class="btn btn-info btn-sm">View on Github</a>
+        <p><a href="{{user.html_url}}" target="_blank" class="btn btn-info btn-sm">View on Github</a></p>
+        <div class="card">
+          <div class="card-heading">
+            <div class="jumbotron">
+              <h2 class="card-title"><strong>Repositories</strong></h2>
+            </div>
+          </div>
+          <div class="card-body" *ngFor="let repo of repos">
+            <div class="row">
+              <div class="col-md-6">
+                <p>{{repo.name}}<p>
+              </div>
+              <div class="col-md-6">
+                <a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-outline-danger">View on
+                  Github</a>
+              </div>
+            </div>
+
+            <p>{{repo.description}}</p>
+            <hr>
+          </div>
+          
+        </div>
       </div>
     </div>
-    
+
   </div>
-  
-  
-  
+
+
+
 
 
 </div>
-
-
-
