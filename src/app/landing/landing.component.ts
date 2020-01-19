@@ -11,14 +11,21 @@ export class LandingComponent implements OnInit {
 
   private user: any;
   private repos: any;
+  username: string;
 
   constructor(private userService: UserService, private repoService: RepoService) {
+    
+  }
+
+  findUser() {
+    this.userService.updateUser(this.username);
     this.userService.getProfileInfo().subscribe(user => {
       console.log(user);
       this.user = user;
 
     });
 
+    // this.repoService.updateRepo();
     this.repoService.getUserRepos().subscribe(repos => {
       console.log(repos);
       this.repos = repos;
