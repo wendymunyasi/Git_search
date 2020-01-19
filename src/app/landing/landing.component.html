@@ -23,9 +23,19 @@
         </ul><br>
         <ul class="list-group">
           <li class="list-group-item" *ngIf="user.location">Current Location: {{user.location}}</li>
+        </ul><br>
+        <ul class="list-group">
+          <li class="list-group-item" *ngIf="user.hireable">Available for hire</li>
         </ul>
       </div>
-      <div class="col-sm-4"></div>
+      <div class="col-sm-4">
+        <p>
+          <span class="badge badge-pill badge-success">{{user.public_repos}} Public Repos</span>
+          <span class="badge badge-pill badge-primary">{{user.followers}} Followers</span>
+          <span class="badge badge-pill badge-warning">{{user.following}} Following</span>
+        </p>
+        <p><a href="{{user.html_url}}" target="_blank" class="btn btn-info btn-sm">View on Github</a>
+      </div>
     </div>
     
   </div>
