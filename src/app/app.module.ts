@@ -1,3 +1,4 @@
+import { RepoService } from './repo-service/repo.service';
 import { UserService } from './user-service/user.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -25,7 +26,7 @@ import { LandingComponent } from './landing/landing.component';
     FormsModule,
     HttpClientModule,
   ],
-  providers: [UserService],
+  providers: [UserService, RepoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
