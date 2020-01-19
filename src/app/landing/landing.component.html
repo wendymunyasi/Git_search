@@ -10,6 +10,23 @@
   <!-- panel body part -->
 
   <div class="panel-body">
+    <div class="row">
+      <div class="col-sm-3">
+        <img src="{{user.avatar_url}}" class="img-responsive" alt="me">
+      </div>
+      <div class="col-sm-5">
+        <ul class="list-group">
+          <li class="list-group-item" *ngIf="user.bio">Bio: {{user.bio}}</li>
+        </ul><br>
+        <ul class="list-group">
+          <li class="list-group-item" *ngIf="user.email">Email: <a href="emailto:{{user.email}}">{{user.email}}</a></li>
+        </ul><br>
+        <ul class="list-group">
+          <li class="list-group-item" *ngIf="user.location">Current Location: {{user.location}}</li>
+        </ul>
+      </div>
+      <div class="col-sm-4"></div>
+    </div>
     
   </div>
   
