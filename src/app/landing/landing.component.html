@@ -1,10 +1,11 @@
 <form>
   <div class="form-group">
-    <input type="text" required class="form-control" placeholder="Enter Github Username" id="name">
+    <input type="text" required class="form-control" placeholder="Enter Github Username" [(ngModel)]="username" [ngModelOptions]="{standalone: true}"
+      (keyup)="findUser()" id="name">
   </div>
-  <div class="text-center">
+  <!-- <div class="text-center">
     <button type="submit" class="btn btn-success" value="submit" type="submit" (click)="search()">Search Github</button>
-  </div>
+  </div> -->
 </form>
 <div *ngIf="user">
 
@@ -63,15 +64,10 @@
             <p>{{repo.description}}</p>
             <hr>
           </div>
-          
+
         </div>
       </div>
     </div>
 
   </div>
-
-
-
-
-
 </div>
