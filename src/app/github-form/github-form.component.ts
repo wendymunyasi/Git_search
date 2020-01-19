@@ -6,14 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./github-form.component.css']
 })
 export class GithubFormComponent implements OnInit {
-
-  constructor() { }
-
-  search() {
-    
+  ngOnInit(): void {
+    throw new Error("Method not implemented.");
   }
 
-  ngOnInit() {
-  }
+
+ 
+  constructor() {}
 
 }

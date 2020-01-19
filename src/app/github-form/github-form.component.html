@@ -1,6 +1,6 @@
 <form>
   <div class="form-group">
-    <input type="text" required class="form-control" placeholder="Enter Github Username" id="name">
+    <input type="text" required class="form-control" placeholder="Enter Github Username" [(ngModel)]="username" name="username">
   </div>
   <div class="text-center">
     <button type="submit" class="btn btn-success" value="submit" type="submit" (click)="search()">Search Github</button>
