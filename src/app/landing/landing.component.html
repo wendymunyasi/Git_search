@@ -1,1 +1,23 @@
-<p>landing works!</p>
+<div *ngIf="user">
+
+  <!-- heading part -->
+  <div class="panel panel-default">
+    {{user.name}}<small>({{user.login}})</small>
+    <span *ngIf="user.company">,Works at {{user.company}}</span>,
+    {{user.location}}
+  </div>
+
+  <!-- panel body part -->
+
+  <div class="panel-body">
+    
+  </div>
+  
+  
+  
+
+
+</div>
+
+
+
