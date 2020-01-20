@@ -19,8 +19,11 @@
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
+    "@ngx-progressbar/core": "^3.0.2",
+    "@ngx-progressbar/http-client": "^3.0.2",
     "bootstrap": "^4.4.1",
     "rxjs": "~6.4.0",
+    "rxjs-compat": "^6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
   },
