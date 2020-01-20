@@ -2,6 +2,26 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
 
+## Author
+
+Wendy Munyasi
+
+## Description
+
+This is a web application that allows a user to search for github users and repositories.
+
+## Setup/Installation Requirements
+Open terminal (CTRL ALT T)
+git clone https://github.comhttps://github.com/wendymunyasi/Git_search
+cd quotes-app
+use atom . or code . to open the cloned repo on Atom or Vs-code respectively
+Deployed link:
+-https://wendymunyasi.github.io/Quotation-IP1/
+
+## Codebeat
+[![codebeat badge](https://codebeat.co/badges/0e2a229e-58b7-4e12-b150-aa00acb64b2e)](https://codebeat.co/projects/github-com-wendymunyasi-git_search-dev)
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
