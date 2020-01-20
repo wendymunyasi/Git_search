@@ -1,8 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
-
 body {
   background-image: url(./assets/wood.jpg);
   background-repeat: repeat;
-  font-family: 'Bangers', cursive;
 }
 /* You can add global styles to this file, and also import other style files */
