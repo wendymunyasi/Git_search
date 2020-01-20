@@ -8,8 +8,9 @@ import { map } from "rxjs/operators";
 })
 export class RepoService {
 
-  private username: string;
-  private repo: any;
+  username: string;
+  repos: any;
+  
 
   private clientid = '471dc5a63a45103713a4';
   private clientsecret = 'e6f34df231761054ce6976a22d07434a1b64d342';
