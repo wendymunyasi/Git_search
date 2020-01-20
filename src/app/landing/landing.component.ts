@@ -9,8 +9,8 @@ import { RepoService } from './../repo-service/repo.service';
 })
 export class LandingComponent implements OnInit {
 
-  private user: any;
-  private repos: any;
+  user: any;
+  repos: any;
   username: string;
 
   constructor(private userService: UserService, private repoService: RepoService) {
