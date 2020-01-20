@@ -39,6 +39,9 @@
           </ul><br>
           <ul class="list-group">
             <li class="list-group-item" *ngIf="user.hireable">Available for hire</li>
+          </ul><br>
+          <ul class="list-group">
+            <li class="list-group-item"><strong>Member Since: </strong>{{user.created_at | date}}</li>
           </ul>
         </div>
         <div class="row">
