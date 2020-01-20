@@ -28,13 +28,17 @@
           <li class="list-group-item" *ngIf="user.bio"><strong>Bio:</strong> {{user.bio}}</li>
         </ul><br>
         <ul class="list-group">
-          <li class="list-group-item" *ngIf="user.email"><strong>Email: </strong> <a href="emailto:{{user.email}}">{{user.email}}</a></li>
+          <li class="list-group-item" *ngIf="user.email"><strong>Email: </strong> <a
+              href="emailto:{{user.email}}">{{user.email}}</a></li>
         </ul><br>
         <ul class="list-group">
           <li class="list-group-item" *ngIf="user.location"><strong>Current Location:</strong> {{user.location}}</li>
         </ul><br>
         <ul class="list-group">
           <li class="list-group-item" *ngIf="user.hireable">Available for hire</li>
+        </ul><br>
+        <ul class="list-group">
+          <li class="list-group-item"><strong>Member Since: </strong>{{user.created_at | date}}</li>
         </ul>
       </div>
       <div class="row">
@@ -54,24 +58,24 @@
             <div class="card-body" *ngFor="let repo of repos">
               <div class="row">
                 <div class="col-md-6">
-                  <p><strong>{{repo.name}}</strong><p>
+                  <p><strong>{{repo.name}}</strong>
+                    <p>
                 </div>
                 <div class="col-md-6">
                   <a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-outline-danger">View on
                     Github</a>
                 </div>
               </div>
-  
+
               <p>{{repo.description}}</p>
               <hr>
             </div>
-  
+
           </div>
         </div>
       </div>
-      
+
     </div>
 
   </div>
 </div>
-
