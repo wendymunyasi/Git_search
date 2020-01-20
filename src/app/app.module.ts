@@ -14,6 +14,7 @@ import { LandingComponent } from './landing/landing.component';
 import { AboutComponent } from './about/about.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { GithubComponent } from './github/github.component';
+import { EmojiDirective } from './emoji.directive';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { GithubComponent } from './github/github.component';
     LandingComponent,
     AboutComponent,
     NotFoundComponent,
-    GithubComponent
+    GithubComponent,
+    EmojiDirective
   ],
   imports: [
     BrowserModule,
