@@ -8,12 +8,11 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: 'about', component: AboutComponent},
-  // { path: 'landing', component: LandingComponent},
+  { path: 'landing', component: LandingComponent},
   { path: 'github', component: GithubComponent},
 
 
-  // { 
-  //   path: "", redirectTo: "github", pathMatch: "full" },
+  // { path: "", redirectTo: "landing", pathMatch: "full" },
   // { path: '**', component: NotFoundComponent},
 
 ];
