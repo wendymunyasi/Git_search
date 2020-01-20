@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers|Courgette|Permanent+Marker&display=swap');
 :host {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 14px;
+  font-family: 'Bangers', cursive;
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Courgette', cursive;
   color: #333;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
