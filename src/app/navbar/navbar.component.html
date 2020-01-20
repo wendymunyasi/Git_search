@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" routerLink="goals"><b>GITHUB SEARCH APP</b></a>
+  <a class="navbar-brand" routerLink="landing"><b>GITHUB SEARCH APP</b></a>
   <button class="navbar-toggler" type="button" (click)="toggleNavbar()" data-toggle="collapse"
     data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
     aria-label="Toggle navigation">
@@ -8,18 +8,10 @@
   <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }" id="navbarNavAltMarkup">
     <ul class="nav-item">
       <li>
-        <a class="nav-item nav-link active" routerLink="goals" routerLinkActive="active">Goals
-
-          <span class="sr-only">(current)</span>
-        </a>
-
-      </li>
-      <li>
-        <a class="nav-item nav-link" routerLink="/about" routerLinkActive="active">About
+        <a class="nav-item nav-link active" routerLink="/about" routerLinkActive="active">About
           <span class="sr-only">(current)</span>
         </a>
       </li>
-
     </ul>
   </div>
 </nav>
