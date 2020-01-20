@@ -1,79 +1,83 @@
-<form>
-  <div class="form-group">
-    <input type="text" required class="form-control" placeholder="Enter Github Username" [(ngModel)]="username"
-      [ngModelOptions]="{standalone: true}" (keyup)="findUser()" id="name">
-  </div>
-  <!-- <div class="text-center">
-    <button type="submit" class="btn btn-success" value="submit" type="submit" (click)="search()">Search Github</button>
-  </div> -->
-</form>
-<div *ngIf="user">
+<div class="container">
+  <form>
+    <div class="form-group">
+      <input type="text" required class="form-control" placeholder="Enter Github Username" [(ngModel)]="username"
+        [ngModelOptions]="{standalone: true}" (keyup)="findUser()" id="name">
+    </div>
+  </form>
+
+  <router-outlet></router-outlet>
+
+  <div>
 
 
-  <!-- panel body part -->
+    <!-- panel body part -->
 
-  <div class="panel-body">
-    <div class="row">
-      <div class="col-md-6">
-        <img src="{{user.avatar_url}}" class="img-responsive" alt="me">
-      </div>
-      <div class="col-md-6">
-        <ul class="list-group">
-          <li class="list-group-item"><strong>Name:</strong> {{user.name}}</li>
-        </ul><br>
-        <ul class="list-group">
-          <li class="list-group-item"><strong>Username:</strong> {{user.login}}</li>
-        </ul><br>
-        <ul class="list-group">
-          <li class="list-group-item" *ngIf="user.company"><strong>Company:</strong> {{user.company}}</li>
-        </ul><br>
-        <ul class="list-group">
-          <li class="list-group-item" *ngIf="user.bio"><strong>Bio:</strong> {{user.bio}}</li>
-        </ul><br>
-        <ul class="list-group">
-          <li class="list-group-item" *ngIf="user.email"><strong>Email: </strong> <a href="emailto:{{user.email}}">{{user.email}}</a></li>
-        </ul><br>
-        <ul class="list-group">
-          <li class="list-group-item" *ngIf="user.location"><strong>Current Location:</strong> {{user.location}}</li>
-        </ul><br>
-        <ul class="list-group">
-          <li class="list-group-item" *ngIf="user.hireable">Available for hire</li>
-        </ul>
-      </div>
+    <div class="panel-body">
       <div class="row">
-        <div class="col-md-12">
-          <p>
-            <span class="badge badge-pill badge-success">{{user.public_repos}} Public Repos</span>
-            <span class="badge badge-pill badge-primary">{{user.followers}} Followers</span>
-            <span class="badge badge-pill badge-warning">{{user.following}} Following</span>
-          </p>
-          <p><a href="{{user.html_url}}" target="_blank" class="btn btn-info btn-sm">View on Github</a></p>
-          <div class="card">
-            <div class="card-heading">
-              <div class="jumbotron">
-                <h2 class="card-title"><strong>Repositories</strong></h2>
-              </div>
-            </div>
-            <div class="card-body" *ngFor="let repo of repos">
-              <div class="row">
-                <div class="col-md-6">
-                  <p><strong>{{repo.name}}</strong><p>
+        <div class="col-md-6">
+          <img src="{{user.avatar_url}}" class="img-responsive" alt="me">
+        </div>
+        <div class="col-md-6">
+          <ul class="list-group">
+            <li class="list-group-item"><strong>Name:</strong> {{user.name}}</li>
+          </ul><br>
+          <ul class="list-group">
+            <li class="list-group-item"><strong>Username:</strong> {{user.login}}</li>
+          </ul><br>
+          <ul class="list-group">
+            <li class="list-group-item" *ngIf="user.company"><strong>Company:</strong> {{user.company}}</li>
+          </ul><br>
+          <ul class="list-group">
+            <li class="list-group-item" *ngIf="user.bio"><strong>Bio:</strong> {{user.bio}}</li>
+          </ul><br>
+          <ul class="list-group">
+            <li class="list-group-item" *ngIf="user.email"><strong>Email: </strong> <a
+                href="emailto:{{user.email}}">{{user.email}}</a></li>
+          </ul><br>
+          <ul class="list-group">
+            <li class="list-group-item" *ngIf="user.location"><strong>Current Location:</strong> {{user.location}}</li>
+          </ul><br>
+          <ul class="list-group">
+            <li class="list-group-item" *ngIf="user.hireable">Available for hire</li>
+          </ul>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <p>
+              <span class="badge badge-pill badge-success">{{user.public_repos}} Public Repos</span>
+              <span class="badge badge-pill badge-primary">{{user.followers}} Followers</span>
+              <span class="badge badge-pill badge-warning">{{user.following}} Following</span>
+            </p>
+            <p><a href="{{user.html_url}}" target="_blank" class="btn btn-info btn-sm">View on Github</a></p>
+            <div class="card">
+              <div class="card-heading">
+                <div class="jumbotron">
+                  <h2 class="card-title"><strong>Repositories</strong></h2>
                 </div>
-                <div class="col-md-6">
-                  <a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-outline-danger">View on
-                    Github</a>
-                </div>
               </div>
-  
-              <p>{{repo.description}}</p>
-              <hr>
+              <div class="card-body" *ngFor="let repo of repos">
+                <div class="row">
+                  <div class="col-md-6">
+                    <p><strong>{{repo.name}}</strong>
+                      <p>
+                  </div>
+                  <div class="col-md-6">
+                    <a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-outline-danger">View on
+                      Github</a>
+                  </div>
+                </div>
+
+                <p>{{repo.description}}</p>
+                <hr>
+              </div>
+
             </div>
-  
           </div>
         </div>
-      </div>
-      
-    </div>
 
+      </div>
+
+    </div>
   </div>
 </div>

@@ -14,7 +14,14 @@ export class LandingComponent implements OnInit {
   username: string;
 
   constructor(private userService: UserService, private repoService: RepoService) {
-    
+    this.userService.getProfileInfo().subscribe(user => {
+      console.log(user);
+      this.user = user;
+    });
+    this.repoService.getUserRepos().subscribe(repos => {
+      console.log(repos);
+      this.repos = repos;
+    });
   }
 
   findUser() {
@@ -22,8 +29,8 @@ export class LandingComponent implements OnInit {
     this.userService.getProfileInfo().subscribe(user => {
       console.log(user);
       this.user = user;
-
     });
+
 
     // this.repoService.updateRepo();
     this.repoService.getUserRepos().subscribe(repos => {
