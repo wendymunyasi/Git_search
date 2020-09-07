@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mx-auto">
   <ng-progress></ng-progress>
   <form>
     <div class="form-group">
@@ -7,23 +7,22 @@
     </div>
   </form>
 
-  <router-outlet></router-outlet>
+  <!-- <router-outlet></router-outlet> -->
 
   <div>
 
 
     <!-- panel body part -->
-
     <div class="panel-body">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-12 col-sm-12 col-md-6 avatar__card">
           <div class="card">
             <div class="card-body">
-              <img src="{{user.avatar_url}}" class="img-responsive" alt="me">
+              <img src="{{user.avatar_url}}" class="img-fluid" alt="me">
             </div>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-12 col-sm-12 col-md-6">
           <ul class="list-group">
             <li class="list-group-item"><strong>Name:</strong> {{user.name}}</li>
           </ul><br>
@@ -50,22 +49,24 @@
           </ul>
         </div>
         <div class="row">
-          <div class="col-md-12">
-            <p>
+          <div class="col-12 col-sm-12 col-md-12">
+            <p class="ml-4 badges">
               <span class="badge badge-pill badge-success">{{user.public_repos}} Public Repos</span>
               <span class="badge badge-pill badge-primary">{{user.followers}} Followers</span>
               <span class="badge badge-pill badge-warning">{{user.following}} Following</span>
             </p>
-            <p><a href="{{user.html_url}}" target="_blank" class="btn btn-info btn-sm">View on Github</a></p>
+            <p class="github"><a href="{{user.html_url}}" target="_blank" class="btn btn-info btn-sm ml-4">View on Github</a></p>
             <div class="card">
               <div class="card-heading">
                 <div class="jumbotron">
-                  <h2 class="card-title"><strong>Repositories</strong></h2>
+                  <h2 class="card-title" style="overflow-y: hidden;"><strong>Repositories</strong></h2>
                 </div>
               </div>
-              <div class="card-body" *ngFor="let repo of repos">
+            </div>
+            <div class="card mb-3 px-2" *ngFor="let repo of repos">
+              <div class="card-body">
                 <div class="row">
-                  <div class="col-md-6">
+                  <div class="col-6 col-sm-6 col-md-6">
                     <p><strong>{{repo.name}}</strong>
                       <p>
                   </div>
@@ -74,17 +75,14 @@
                       Github</a>
                   </div>
                 </div>
-
                 <p>{{repo.description}}</p>
-                <hr>
               </div>
+            </div>  
+      
 
-            </div>
           </div>
         </div>
-
       </div>
-
     </div>
   </div>
 </div>

@@ -1,0 +1,17 @@
+@media screen and (max-width:480px) {
+
+  .navbar-brand {
+    font-size: 1rem;
+  } 
+}
+
+@media screen and (max-width:250px) {
+
+  .navbar-brand {
+    font-size: .5rem;
+  } 
+
+  footer {
+    display: none;
+  }
+}

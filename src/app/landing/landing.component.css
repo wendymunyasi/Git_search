@@ -1,0 +1,84 @@
+*,
+*::after,
+*::before {
+  /* margin: 0;
+  padding: 0; */
+  /* outline: 1px solid red !important; */
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  box-sizing: inherit;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; 
+}
+
+@media screen and (max-width:768px) {
+
+  .avatar__card {
+    margin-bottom: 1rem;
+  } 
+
+  .row .badges {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0 !important;
+    padding: 2rem;
+  }
+
+  span.badge {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  p a.ml-4 {
+    margin-left: 0 !important;
+    margin-right: 0 !important; 
+  }
+
+  p.github {
+    text-align: center;
+  }
+
+  .card-title {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width:250px) { 
+
+  ::placeholder {
+    font-size: .5rem;
+  }
+
+  input#name {
+    height: 80%;
+  }
+
+  li, p, a.ml-4 {
+    font-size: .6rem;
+  }
+
+  p a.ml-4 {
+    margin-left: 0 !important;
+    margin-right: 0 !important; 
+  }
+
+  p.github {
+    text-align: center;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+}

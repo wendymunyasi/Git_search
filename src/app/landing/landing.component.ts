@@ -18,7 +18,7 @@ export class LandingComponent implements OnInit {
       console.log(user);
       this.user = user;
     });
-    this.repoService.getUserRepos().subscribe(repos => {
+    this.userService.getProfileRepos().subscribe(repos => {
       console.log(repos);
       this.repos = repos;
     });
@@ -29,7 +29,7 @@ export class LandingComponent implements OnInit {
     this.userService.getProfileInfo().subscribe(user => {
       console.log(user);
       this.user = user;
-    });
+    }); 
 
 
     // this.repoService.updateRepo();

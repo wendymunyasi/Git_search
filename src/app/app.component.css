@@ -60,3 +60,23 @@ footer a {
   width: 16px;
   margin-right: 4px;
 }
+
+@media screen and (max-width:480px) {
+
+  h1, input#name {
+    font-size: 1rem;
+  }
+
+}
+
+@media screen and (max-width:250px) { 
+
+  h1, input#name {
+    font-size: .5rem;
+  }
+
+  footer {
+    display: none;
+  }
+
+}
