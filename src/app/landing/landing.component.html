@@ -1,13 +1,16 @@
 <div class="container mx-auto">
   <ng-progress></ng-progress>
+
+  <router-outlet></router-outlet> 
+
+  
   <form>
     <div class="form-group">
-      <input type="text" required class="form-control" placeholder="Enter Github Username" [(ngModel)]="username"
-        [ngModelOptions]="{standalone: true}" (keyup)="findUser()" id="name">
+      <input type="text" required class="form-control" placeholder="Enter Github Username" [(ngModel)]="username" [ngModelOptions]="{standalone: true}"
+       (keydown)="findUser($event)"
+              id="name">
     </div>
   </form>
-
-  <!-- <router-outlet></router-outlet> -->
 
   <div>
 
@@ -16,46 +19,48 @@
     <div class="panel-body">
       <div class="row">
         <div class="col-12 col-sm-12 col-md-6 avatar__card">
-          <div class="card">
-            <div class="card-body">
-              <img src="{{user.avatar_url}}" class="img-fluid" alt="me">
+          <div class="card border-0" style="background-color: transparent;">
+            <div class="card-body" *ngIf="user">
+              <img *ngIf="user.avatar_url" src="{{user.avatar_url}}" class="img-fluid" alt="me">
             </div>
           </div>
         </div>
         <div class="col-12 col-sm-12 col-md-6">
-          <ul class="list-group">
-            <li class="list-group-item"><strong>Name:</strong> {{user.name}}</li>
+          <ul class="list-group" *ngIf="user">
+            <li class="list-group-item" *ngIf="user.name"><strong>Name:</strong> {{user.name}}</li>
           </ul><br>
-          <ul class="list-group">
-            <li class="list-group-item"><strong>Username:</strong> {{user.login}}</li>
+          <ul class="list-group" *ngIf="user">
+            <li class="list-group-item"  *ngIf="user.login"><strong>Username:</strong> {{user.login}}</li>
           </ul><br>
-          <ul class="list-group">
+          <ul class="list-group" *ngIf="user">
             <li class="list-group-item" *ngIf="user.company"><strong>Company:</strong> {{user.company}}</li>
           </ul><br>
-          <ul class="list-group">
+          <ul class="list-group" *ngIf="user">
             <li class="list-group-item" *ngIf="user.bio"><strong>Bio:</strong> {{user.bio}}</li>
           </ul><br>
-          <ul class="list-group">
+          <ul class="list-group" *ngIf="user">
             <li class="list-group-item" *ngIf="user.email"><strong>Email: </strong>{{user.email}}</li>
           </ul><br>
-          <ul class="list-group">
+          <ul class="list-group" *ngIf="user">
             <li class="list-group-item" *ngIf="user.location"><strong>Current Location:</strong> {{user.location}}</li>
           </ul><br>
-          <ul class="list-group">
+          <ul class="list-group" *ngIf="user">
             <li class="list-group-item" *ngIf="user.hireable">Available for hire</li>
           </ul><br>
-          <ul class="list-group">
-            <li class="list-group-item"><strong>Member Since: </strong>{{user.created_at | date}}</li>
+          <ul class="list-group" *ngIf="user">
+            <li class="list-group-item" *ngIf="user.created_at"><strong>Member Since: </strong>{{user.created_at | date}}</li>
           </ul>
         </div>
-        <div class="row">
-          <div class="col-12 col-sm-12 col-md-12">
-            <p class="ml-4 badges">
-              <span class="badge badge-pill badge-success">{{user.public_repos}} Public Repos</span>
-              <span class="badge badge-pill badge-primary">{{user.followers}} Followers</span>
-              <span class="badge badge-pill badge-warning">{{user.following}} Following</span>
+        <div class="row mx-auto">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+            <p class="ml-4 badges" *ngIf="user">
+              <span class="badge badge-pill badge-success" *ngIf="user.public_repos">{{user.public_repos}} Public Repos</span>
+              <span class="badge badge-pill badge-primary" *ngIf="user.followers">{{user.followers}} Followers</span>
+              <span class="badge badge-pill badge-warning" *ngIf="user.following">{{user.following}} Following</span>
             </p>
-            <p class="github"><a href="{{user.html_url}}" target="_blank" class="btn btn-info btn-sm ml-4">View on Github</a></p>
+            <p class="github" *ngIf="user">
+              <a href="{{user.html_url}}" target="_blank" class="btn btn-info btn-sm ml-4">View on Github</a>
+            </p>
             <div class="card">
               <div class="card-heading">
                 <div class="jumbotron">
