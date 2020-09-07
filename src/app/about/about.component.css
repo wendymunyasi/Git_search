@@ -1,0 +1,48 @@
+@media screen and (max-width:768px) {
+
+ h1 {
+   font-size: 2rem;
+ }
+
+}
+
+@media screen and (max-width:480px) {
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+
+}
+
+@media screen and (max-width:250px) { 
+
+  ::placeholder {
+    font-size: .5rem;
+  }
+
+  input#name {
+    height: 80%;
+  }
+
+  li, p, a.ml-4 {
+    font-size: .6rem;
+  }
+
+  p a.ml-4 {
+    margin-left: 0 !important;
+    margin-right: 0 !important; 
+  }
+
+  p.github {
+    text-align: center;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+}
