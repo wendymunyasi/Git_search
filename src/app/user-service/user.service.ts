@@ -11,7 +11,7 @@ export class UserService {
   private clientsecret = 'e6f34df231761054ce6976a22d07434a1b64d342';
 
   constructor(private http: HttpClient) {
-    console.log("service is running");
+    // console.log("service is running");
     this.username = 'wendymunyasi';
 
   }
