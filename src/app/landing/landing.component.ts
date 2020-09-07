@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from './../user-service/user.service';
-import { RepoService } from './../repo-service/repo.service';
 
 @Component({
   selector: 'app-landing',
@@ -13,7 +12,7 @@ export class LandingComponent implements OnInit {
   repos: any;
   username: string;
 
-  constructor(private userService: UserService, private repoService: RepoService) {
+  constructor(private userService: UserService) {
     this.userService.getProfileInfo().subscribe(user => {
       console.log(user);
       this.user = user;
@@ -29,15 +28,19 @@ export class LandingComponent implements OnInit {
     this.userService.getProfileInfo().subscribe(user => {
       console.log(user);
       this.user = user;
-    }); 
+    });
+    this.userService.getProfileRepos().subscribe(repos => {
+      console.log(repos);
+      this.repos = repos;
+    });
 
 
     // this.repoService.updateRepo();
-    this.repoService.getUserRepos().subscribe(repos => {
-      console.log(repos);
-      this.repos = repos;
+    // this.repoService.getUserRepos().subscribe(repos => {
+    //   console.log(repos);
+    //   this.repos = repos;
 
-    });
+    // });
   }
 
   ngOnInit() {

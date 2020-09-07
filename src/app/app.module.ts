@@ -1,4 +1,3 @@
-import { RepoService } from './repo-service/repo.service';
 import { UserService } from './user-service/user.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -15,7 +14,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LandingComponent } from './landing/landing.component';
 import { AboutComponent } from './about/about.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { GithubComponent } from './github/github.component';
+// import { GithubComponent } from './github/github.component';
 import { EmojiDirective } from './emoji.directive';
 
 @NgModule({
@@ -25,7 +24,7 @@ import { EmojiDirective } from './emoji.directive';
     LandingComponent,
     AboutComponent,
     NotFoundComponent,
-    GithubComponent,
+    // GithubComponent,
     EmojiDirective
   ],
   imports: [
@@ -36,7 +35,7 @@ import { EmojiDirective } from './emoji.directive';
     NgProgressModule.forRoot(),
     NgProgressHttpClientModule,
   ],
-  providers: [UserService, RepoService],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
